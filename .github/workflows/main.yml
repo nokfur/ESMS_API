@@ -37,5 +37,6 @@ jobs:
 
       - name: Restart the app
         run: |
+          systemctl stop esms.service
           dotnet "/var/www/esms/ESMS API.dll"
-          sudo systemctl restart esms.service
+          systemctl restart esms.service
